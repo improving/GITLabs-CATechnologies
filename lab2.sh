@@ -14,13 +14,13 @@ git commit -am "First Commit"
 git checkout -b working
 
 # do work & commit
-touch file1.txt
+echo "fizz buzz" > file1.txt
 git add .
 git commit -am "working commit1"
-touch file2.txt
+echo "fizz buzz" > file2.txt
 git add .
 git commit -am "working commit2"
-touch file3.txt
+echo "fizz buzz" > file3.txt
 git add .
 git commit -am "working commit3"
 
