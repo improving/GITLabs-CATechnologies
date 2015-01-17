@@ -3,6 +3,7 @@
 rm -rf ./lab1
 mkdir ./lab1
 cd ./lab1
+git init
 
 # Setup one commit on master
 touch README
