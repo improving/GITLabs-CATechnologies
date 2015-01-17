@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf lab*
+find -type d -name 'lab*' -exec rm -rf {} \;

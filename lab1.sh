@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf ./lab1
+. ./clean-all.sh
 mkdir ./lab1
 cd ./lab1
 git init
