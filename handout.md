@@ -13,7 +13,11 @@ This is the Git notes from the 2-day training session at ImprovingEnterprises on
   * Changes are committed to the local repository
 1. Repeat as often as you need
 
-## Overview of the Main Git Structures
+Variation on commit step:
+`git commit -am "meaningful comment"`
+* This will automatically "add" all previously tracked files to the repository.  Currently untracked [new] files still need to be added with `git add .`.
+
+### Overview of the Main Git Structures
 
 ```
 DIR          INDEX        REPO         REMOTE
@@ -120,6 +124,9 @@ Get rid of trash files all in one go
 git add .
 git reset --hard HEAD
 ```
+
+### Quirky Git Stuff
+* You can't add an empty directory.
 
 ### Commands not to use
 Do not invoke garbage collection
