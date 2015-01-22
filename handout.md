@@ -1,4 +1,3 @@
-
 #GIT Notes
 ##This is the Git notes from the 1-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 
@@ -19,7 +18,6 @@
 1. Write Code
 2. Add `git add .`
 3. Commit `git commit -m "msg"`
-
 ####Don't use or use with caution
 
 1. `git gc`
@@ -41,7 +39,6 @@ which is where almost everything that Git stores and manipulates is located.
 
 
 ##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
-
 
 ### Git Simple Cycle
 
@@ -72,6 +69,7 @@ DIR          INDEX        repository         REMOTE
 --> push ----] (moves to remote)
 ```
 
+
 ## Command Line Cheat Sheet
 Verify Git installation
 ```
@@ -81,6 +79,20 @@ Get help with Git
 ```
 git help
 ```
+## Start (on set-up)
+get products:  git-scm, Atom.io, p4merge
+(install GIT 2.2.2 or later)
+
+right-click a directory for 'home base'
+select "GIT base"
+type 'git init' (first time only)  
+
+default text editor is VI (think UNIX)
+
+Auto CR-LF = false (This is set by default. Do not change.)
+
+When setting up your repository, maintain product structure and directories. Do `get init` from the root.
+
 Show Aliases
 ```
 git alias
@@ -117,11 +129,11 @@ Set user name
 ```
 git config --global user.name "user_name"
 ```
-### Working Locally
-Start git at a folder
-```
-git init
-```
+
+General work cycle
+* Write code
+* . add
+* commit
 
 Checkout a branch
 ```
@@ -132,6 +144,7 @@ Creating a new branch
 ```
 git branch -b <new_branch_name>
 ```
+* New branch name can include a backslash for git to use for organization.
 
 Show all branches
 ```
@@ -154,13 +167,55 @@ Take off the most recent *n* commits, and discard the changes
 ```
 git reset --hard HEAD~n
 ```
+  type 'git init' (first time only)
+  git -scm will determine IDE (install 2.2.2 or later)
 
-### Working with Remote repository
+### Working with Remote Repository
+    get products:  Atom.io, p4merge
+
+  default text editor is VI (think UNIX)
+### Working Locally
+
+General work cycle
+      * Write code
+      * . add
+      * commit
+
+##General
+
+To see prior history 'git history'
+
+To undo prior commits use the command:
+```
+git revert <HEAD, sha, commitish, or HEAD~n>
+```
+
 First we need to add a remote location.
 
 ```
 git remote add <name> <url>
 ```
+* use -v (verbose) to see path for remotes
+
+To remove a remote location:
+
+...
+git remote rm <name>
+...
+
+Note: 'origin' is commonly used for 'source of truth', can reference any other url
+
+To download a copy of an exiting repository:
+git clone origin
+
+### Network commands
+
+**PULL    read only
+**PUSH    read/write
+**FETCH   read only (included in PULL and CLONE, rarely used alone)
+**CLONE   downloads a copy of an existing repository
+
+
 Create a remote branch
 ```
 git push <remote> localBranch:remoteBranch
@@ -332,6 +387,19 @@ git reset --hard HEAD
 
 ## Discussions
 
+Set up a github account.  Can be free account with name/password.  Good place for offsite backup of work, apart from where our 'source of truth' will be.
+
+Remember git (like UNIX) is case-sensitive.
+
+
+#Best Practices
+Work from a **working** or **feature** branch, not **master**
+
+Use 'git status' frequently to be sure where you are, what needs to be committed or removed (like .origin files)
+
+Use 'git config' if you need to change some of your configuration.  
+
+
 ## Tim's Aliases
 
 ### Simple Aliases
@@ -402,6 +470,7 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 ```
+
 # Important GIT commands
 
     git status // gives you all the status
