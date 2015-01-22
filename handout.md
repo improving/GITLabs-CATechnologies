@@ -10,6 +10,20 @@ This is the Git notes from the 2-day training session at ImprovingEnterprises on
 1. `git commit -m "meaningful comment"`
 1. Repeat as often as you need
 
+## Overview of the Main Git Structures
+
+```
+DIR          INDEX        REPO         REMOTE
+--------     --------     --------     --------
+] WRITE
+] CODE
+
+--> add . -] (moves to index)
+
+--> commit --] (moves to repo)
+
+--> push ----] (moves to remote)
+```
 ## Command Line Cheat Sheet
 Verify Git installation
 ```
