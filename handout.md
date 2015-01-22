@@ -154,6 +154,3 @@ git config --global alias.who 'shortlog -s -e --'
 known problem with installer if the TEMP and TMP variables are pointing to long path
 
 3. p4merge P4Merge: Visual Merge Tool : http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
-1. Git Init
-1. Git add .
-3. Git commit -m "lab2"
