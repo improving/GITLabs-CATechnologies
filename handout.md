@@ -14,7 +14,7 @@ git help
 ### Working Locally
 Start git at a folder
 ```
-git init
+git init (to create a new git repository from the current directory)
 ```
 
 ### Working with Remote Repos
