@@ -33,6 +33,18 @@ Get help with Git
 ```
 git help
 ```
+Show Aliases
+```
+git alias
+```
+Show all branches in repo
+```
+git branch
+```
+Show status of repo
+```
+git status
+```
 ### Working Locally
 Start git at a folder
 ```
