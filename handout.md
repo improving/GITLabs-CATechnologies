@@ -31,6 +31,7 @@ DIR          INDEX        REPO         REMOTE
 
                           --> push ----] (moves to remote)
 ```
+
 ## Command Line Cheat Sheet
 Verify Git installation
 ```
