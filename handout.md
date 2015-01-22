@@ -10,24 +10,24 @@ This is the Git notes from the 2-day training session at ImprovingEnterprises on
 1. `git add .`
   * Changes are noted in the index area
 1. `git commit -m "meaningful comment"`
-  * Changes are committed to the local repository
+  * Changes are committed to the local repositorysitory
 1. Repeat as often as you need
 
 Variation on commit step:
 `git commit -am "meaningful comment"`
-* This will automatically "add" all previously tracked files to the repository.  Currently untracked [new] files still need to be added with `git add .`.
+* This will automatically "add" all previously tracked files to the repositorysitory.  Currently untracked [new] files still need to be added with `git add .`.
 
 ### Overview of the Main Git Structures
 
 ```
-DIR          INDEX        REPO         REMOTE
+DIR          INDEX        repository         REMOTE
 --------     --------     --------     --------
 ] WRITE
 ] CODE
 
   --> add . -] (moves to index)
 
-             --> commit --] (moves to repo)
+             --> commit --] (moves to repository)
 
                           --> push ----] (moves to remote)
 ```
@@ -45,11 +45,11 @@ Show Aliases
 ```
 git alias
 ```
-Show all branches in repo
+Show all branches in repository
 ```
 git branch
 ```
-Show status of repo
+Show status of repository
 ```
 git status
 ```
@@ -57,17 +57,25 @@ Discard changes made to a specific file and restore it
 ```
 git checkout -- filename
 ```
-Delete a branch from a repo
+Delete a branch from a repository
 ```
 git branch -D branchName
 ```
-View history of commits to the repository
+View history of commits to the repositorysitory
 ```
 git reflog
 ```
 Invoke a graphical representation of reflog
 ```
 gitk
+```
+Set user email
+```
+git config --global user.email "user_email"
+```
+Set user name
+```
+git config --global user.name "user_name"
 ```
 ### Working Locally
 Start git at a folder
@@ -92,7 +100,7 @@ git branch -a
 
 Commit changes to local repository
 ```
-git commit -m"commit_message"
+git commit -m "commit_message"
 ```
 Take off the most recent commit, but keep the changes
 ```
@@ -107,7 +115,7 @@ Take off the most recent *n* commits, and discard the changes
 git reset --hard HEAD~n
 ```
 
-### Working with Remote Repos
+### Working with Remote repository
 First we need to add a remote location.
 
 ```
@@ -122,7 +130,7 @@ Delete a remote branch
 git push <remote> :branchToDelete
 ```
 ## Advanced topics
-### Ignoring files in your repository
+### Ignoring files in your repositorysitory
 To ignore specific files, you need to create a .gitignore by running
 ```
 touch .gitignore
@@ -141,7 +149,7 @@ git reset --hard HEAD
 ```
 git filter-branch --tree-filter 'rm -rf lib' HEAD
 ```
-This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repository, but a bad idea in most other cases.
+This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repositorysitory, but a bad idea in most other cases.
 
 
 
@@ -174,6 +182,16 @@ Do not rebase nodes that have been pushed
 ```
 git rebase -i <commitish>..<commitish>
 ```
+
+### Required software:
+```
+1. GIT : http://git-scm.com/
+2. Atom : https://atom.io/
+known problem with installer if the TEMP and TMP variables are pointing to long path
+
+3. p4merge P4Merge: Visual Merge Tool : http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
+```
+
 ## Discussions
 
 ## Tim's Aliases
