@@ -20,5 +20,9 @@ GIT is File system based version control.
 2. `git clean`
 
 #Git Internal components
+
+When you run git init in a new or existing directory, Git creates the .git directory,
+which is where almost everything that Git stores and manipulates is located.
+
 1.Repository
 2.Index
