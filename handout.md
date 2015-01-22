@@ -14,3 +14,7 @@ GIT is File system based version control.
 1. Write Code
 2. Add
 3. Commit
+
+#Don't use or use with caution
+1. `git gc`
+2. `git cleam`
