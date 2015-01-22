@@ -17,4 +17,8 @@ GIT is File system based version control.
 
 #Don't use or use with caution
 1. `git gc`
-2. `git cleam`
+2. `git clean`
+
+#Git Internal components
+1.Repository
+2.Index
