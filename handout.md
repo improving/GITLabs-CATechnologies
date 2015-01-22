@@ -25,18 +25,20 @@ Before we begin, ensure that following are installed
 ### Git Configuration
 
 Once the git is installed, set the user email address and the user name
+```
   * git config -user.email <email_address>
   * git config -user.name <user_name>
+```
 
 ### Creating a new repository
 
 Create a new directory, go to the newly created directory and do git init.
-
-*   $ mkdir demo
-*   $ cd demo/
-*   $ git init
-*     Initialized empty Git repository in c:/source/demo/.git/
-
+```
+   $ mkdir demo
+   $ cd demo/
+   $ git init
+     Initialized empty Git repository in c:/source/demo/.git/
+```
 This will create a local master and all your current will be in the 'master'
 
 
@@ -47,9 +49,10 @@ Recommendation is that any work should be carried out in a different branch (for
 
 Creating a branch automatically switches the working branch to the new created branch (-b option creates a new branch)
 
-  * $ git checkout -b working
-  *   Switched to a new branch 'working'
-
+```
+  $ git checkout -b working
+     Switched to a new branch 'working'
+```
 Now to add a file to the repository
 
    * Create a file
@@ -57,12 +60,28 @@ Now to add a file to the repository
    * To check the status of the files under your repository (git status).
    * Commit the file(s) to the local repository (git commit -m <comment>)
 
-### View the logs for the current branch
+### Merging branches
+### Deleting branches
 
-  * git reflog
 
-  This lists the commit history
-## Clone a repository
+### Clone a repository
+
+It is possible to clone local repository or a remote one.
+
+To clone a remote repository:
+
+```
+git clone https://github.com/<username>/<repositoryname>.git [<target_directory>]
+```
+
+By default it would create a directory named "repositoryname", if target is not specified.
+
+To clone a local repository:
+
+```
+cd <parent_folder_of_the_repository_to_be_cloned>
+git clone <repo>/.git <cloned_repo>
+```
 
 
 ### WorkFlow
@@ -104,11 +123,21 @@ Commit changes to local repository
 git commit -m"commit_message"
 ```
 
-### Working with Remote Repos
+Working with Remote Repos
 First we need to add a remote location.
 
 ```
 git remote add <name> <url>
+```
+View the logs for the current branch
+
+```
+git reflog
+```
+Cleaning all temporary and unwanted files not in the repository
+
+```
+git add . && git reset --hard HEAD
 ```
 
 
