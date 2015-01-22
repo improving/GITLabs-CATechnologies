@@ -25,18 +25,20 @@ Before we begin, ensure that following are installed
 ### Git Configuration
 
 Once the git is installed, set the user email address and the user name
+
 ```
-  * git config -user.email <email_address>
-  * git config -user.name <user_name>
+git config -user.email <email_address>
+git config -user.name <user_name>
 ```
 
 ### Creating a new repository
 
 Create a new directory, go to the newly created directory and do git init.
+
 ```
-   $ mkdir demo
-   $ cd demo/
-   $ git init
+$mkdir demo
+$cd demo/
+$ git init
      Initialized empty Git repository in c:/source/demo/.git/
 ```
 This will create a local master and all your current will be in the 'master'
@@ -61,9 +63,19 @@ Now to add a file to the repository
    * Commit the file(s) to the local repository (git commit -m <comment>)
 
 ### Merging branches
+Merging is Git's way of putting back together again a forked history. The git merge command lets you take the commits from one git branch and integrate them into a single branch.
+Following command merge into the current branch. The current branch will be updated to reflect the merge, but the target branch will be completely unaffected.
+
+```
+git merge <branch>
+```
+
 ### Deleting branches
 
+```
+git branch -d for deleting the obsolete target branch
 
+```
 ### Clone a repository
 
 It is possible to clone local repository or a remote one.
