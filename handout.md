@@ -32,32 +32,32 @@ Once the git is installed, set the user email address and the user name
 Git allows you define your own aliases to make your life easier
 
 ### Bare minimum aliases
-  git config --global alias.a 'add -A'
-  git config --global alias.b 'branch'
-  git config --global alias.c 'checkout'
-  git config --global alias.cb 'checkout -b'
-  git config --global alias.pr 'pull --rebase'
-  git config --global alias.pom 'push origin master'
-  git config --global alias.rc 'rebase --continue'
-  git config --global alias.ra 'rebase --abort'
-  git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-  git config --global alias.lga "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
-  git config --global alias.aliases "config --get-regexp alias"
+*   git config --global alias.a 'add -A'
+*   git config --global alias.b 'branch'
+*   git config --global alias.c 'checkout'
+*   git config --global alias.cb 'checkout -b'
+*   git config --global alias.pr 'pull --rebase'
+*   git config --global alias.pom 'push origin master'
+*   git config --global alias.rc 'rebase --continue'
+*   git config --global alias.ra 'rebase --abort'
+*   git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+*   git config --global alias.lga "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
+*   git config --global alias.aliases "config --get-regexp alias"
 
 #### Colorization
-  git config --global color.branch "auto"
-  git config --global color.diff "auto"
-  git config --global color.status "auto"
-  git config --global color.branch.current "yellow reverse"
-  git config --global color.branch.local "yellow"
-  git config --global color.branch.remote "green"
-  git config --global color.diff.meta "yellow bold"
-  git config --global color.diff.frag "magenta bold"
-  git config --global color.diff.old "red bold"
-  git config --global color.diff.new "green bold"
-  git config --global color.status.added "yellow"
-  git config --global color.status.changed "green"
-  git config --global color.status.untracked "cyan"
+*   git config --global color.branch "auto"
+*   git config --global color.diff "auto"
+*   git config --global color.status "auto"
+*   git config --global color.branch.current "yellow reverse"
+*   git config --global color.branch.local "yellow"
+*   git config --global color.branch.remote "green"
+*   git config --global color.diff.meta "yellow bold"
+*   git config --global color.diff.frag "magenta bold"
+*   git config --global color.diff.old "red bold"
+*   git config --global color.diff.new "green bold"
+*   git config --global color.status.added "yellow"
+*   git config --global color.status.changed "green"
+*   git config --global color.status.untracked "cyan"
 
 
 
@@ -65,19 +65,13 @@ Git allows you define your own aliases to make your life easier
 
 Create a new directory, go to teh newly created directory and do git init.
 
-  $ mkdir demo
-  $ cd demo/
-  $ git init
-  Initialized empty Git repository in c:/source/demo/.git/
+*   $ mkdir demo
+*   $ cd demo/
+*   $ git init
+*     Initialized empty Git repository in c:/source/demo/.git/
 
 This will create a local master and all your current will be in the 'master'
 
-Now to add a file to the repository
-
-- Create a file
-- Add it to index (git add .)
-- To check the status of the files under your repository (git status)
-- commit the files to the local repository (git commit -m <comment>)
 
 ### Working with branches
 
@@ -86,10 +80,18 @@ Recommendation is that any work should be carried out in a different branch (for
 
 Creating a branch automatically switches the working branch to the new created branch (-b option creates a new branch)
 
-  $ git checkout -b working
-   Switched to a new branch 'working'
+  * $ git checkout -b working
+  *   Switched to a new branch 'working'
+
+Now to add a file to the repository
+
+   * Create a file
+   * Add it to index (git add .)
+   * To check the status of the files under your repository (git status).
+   * Commit the file(s) to the local repository (git commit -m <comment>)
 
 ## Clone a repository
+
 
 ### WorkFlow
 
@@ -108,11 +110,6 @@ git --version
 Get help with Git
 ```
 git help
-```
-### Working Locally
-Start git at a folder
-```
-git init
 ```
 
 ### Working with Remote Repos
