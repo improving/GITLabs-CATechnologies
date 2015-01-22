@@ -18,6 +18,7 @@ Start git at a folder
 git init
 ```
 
+
 Checkout a branch
 ```
 git checkout <branch_name>
@@ -143,3 +144,9 @@ git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 
 
+# Install required software:
+1. Install GIT : http://git-scm.com/
+2. atom : https://atom.io/
+known problem with installer if the TEMP and TMP variables are pointing to long path
+
+3. p4merge P4Merge: Visual Merge Tool : http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
