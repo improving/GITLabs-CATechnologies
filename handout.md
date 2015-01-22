@@ -3,6 +3,13 @@
 This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 ## Git Overview
 
+### Git Simple Cycle
+
+1. Write Code
+1. `git add .`
+1. `git commit -m "meaningful comment"`
+1. Repeat as often as you need
+
 ## Command Line Cheat Sheet
 Verify Git installation
 ```
@@ -142,3 +149,4 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 ```
+
