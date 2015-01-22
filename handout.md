@@ -61,6 +61,14 @@ Delete a branch from a repo
 ```
 git branch -D branchName
 ```
+View history of commits to the repository
+```
+git reflog
+```
+Invoke a graphical representation of reflog
+```
+gitk
+```
 ### Working Locally
 Start git at a folder
 ```
@@ -86,6 +94,18 @@ Commit changes to local repository
 ```
 git commit -m"commit_message"
 ```
+Take off the most recent commit, but keep the changes
+```
+git reset HEAD
+```
+Take of the most recent *n* commits, but keep the changes
+```
+git reset HEAD~n
+```
+Take off the most recent *n* commits, and discard the changes
+```
+git reset --hard HEAD~n
+```
 
 ### Working with Remote Repos
 First we need to add a remote location.
@@ -93,8 +113,14 @@ First we need to add a remote location.
 ```
 git remote add <name> <url>
 ```
-
-
+Create a remote branch
+```
+git push <remote> localBranch:remoteBranch
+```
+Delete a remote branch
+```
+git push <remote> :branchToDelete
+```
 ## Advanced topics
 ### Ignoring files in your repository
 To ignore specific files, you need to create a .gitignore by running
@@ -125,7 +151,13 @@ Get rid of trash files all in one go
 git add .
 git reset --hard HEAD
 ```
-
+Create an easy undo strategy
+```
+git checkout -b <undoBranch>
+<some possibly dangerous actions>
+git checkout <branch you want to keep>
+git checkout -D <branch you don't want to keep>
+```
 ### Quirky Git Stuff
 * You can't add an empty directory.
 
@@ -214,4 +246,3 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 ```
-
