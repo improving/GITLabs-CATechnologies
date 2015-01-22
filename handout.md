@@ -89,6 +89,10 @@ type 'git init' (first time only)
 
 default text editor is VI (think UNIX)
 
+Auto CR-LF = false (This is set by default. Do not change.)
+
+When setting up your repository, maintain product structure and directories. Do `get init` from the root.
+
 Show Aliases
 ```
 git alias
@@ -132,6 +136,7 @@ Creating a new branch
 ```
 git branch -b <new_branch_name>
 ```
+* New branch name can include a backslash for git to use for organization.
 
 Show all branches
 ```
@@ -171,8 +176,10 @@ General work cycle
 
 To see prior history 'git history'
 
-
-
+To undo prior commits use the command:
+```
+git revert <HEAD, sha, commitish, or HEAD~n>
+```
 
 ### Working with Remote Repos
 First we need to add a remote location.
@@ -180,8 +187,7 @@ First we need to add a remote location.
 ```
 git remote add <name> <url>
 ```
-
-
+* use -v (verbose) to see path for remotes
 
 To remove a remote location:
 
