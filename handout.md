@@ -1,4 +1,3 @@
-
 # Git Notes
 This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 ## Git Overview
@@ -347,3 +346,4 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 ```
+
