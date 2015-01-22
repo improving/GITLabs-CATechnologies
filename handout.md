@@ -5,8 +5,11 @@ This is the Git notes from the 2-day training session at ImprovingEnterprises on
 ### Git Simple Cycle
 
 1. Write Code
+  * Changes to files are stored in the local directory
 1. `git add .`
+  * Changes are noted in the index area
 1. `git commit -m "meaningful comment"`
+  * Changes are committed to the local repository
 1. Repeat as often as you need
 
 ### Overview of the Main Git Structures
@@ -44,6 +47,14 @@ git branch
 Show status of repo
 ```
 git status
+```
+Discard changes made to a specific file and restore it
+```
+git checkout -- filename
+```
+Delete a branch from a repo
+```
+git branch -D branchName
 ```
 ### Working Locally
 Start git at a folder
