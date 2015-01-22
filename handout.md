@@ -12,20 +12,22 @@ Get help with Git
 ```
 git help
 ```
-##Start (on set-up)
-  right-click a directory for 'home base'
-  select GIT base
-  type 'git init' (first time only)
-  git -scm will determine IDE (install 2.2.2 or later)
+## Start (on set-up)
+get products:  git-scm, Atom.io, p4merge
+(install GIT 2.2.2 or later)
 
-    get products:  Atom.io, p4merge
+right-click a directory for 'home base'
+select "GIT base"
+type 'git init' (first time only)  
 
-  default text editor is VI (think UNIX)
+default text editor is VI (think UNIX)
+
 ### Working Locally
-Start git at a folder
-```
-git init
-```
+
+General work cycle
+* Write code
+* . add
+* commit
 
 Checkout a branch
 ```
@@ -53,7 +55,7 @@ First we need to add a remote location.
 ```
 git remote add <name> <url>
 ```
-
+Note: 'origin' is commonly used for 'source of truth', can reference any other url
 
 ## Advanced topics
 ### Ignoring files in your repository
@@ -80,6 +82,16 @@ This command modifies every commit in the current branch, back to the root, and 
 
 
 ## Discussions
+
+Set up a github account.  Can be free account with name/password.  Good place for offsite backup of work, apart from where our 'source of truth' will be.
+
+Remember git (like UNIX) is case-sensitive.
+
+Work from a **working** or **feature** branch, not **master**
+
+Use 'git status' frequently to be sure where you are, what needs to be committed or removed (like .origin files)
+
+Use 'git config' if you need to change some of your configuration.  
 
 ## Tim's Aliases
 
@@ -155,27 +167,12 @@ git config --global alias.who 'shortlog -s -e --'
 
 
 
-General work cycle
-      * Write code
-      * . add
-      * commit
 
 
 
-## Discussions
-
-##General
-Set up a github account.  Can be free account with name/password.  Good place for offsite backup of work, apart from where our 'source of truth' will be.
-
-Remember git (like UNIX) is case-sensitive.
 
 
-#Best Practices
-Work from a **working** or **feature** branch, not **master**
 
-Use 'git status' frequently to be sure where you are, what needs to be committed or removed (like .origin files)
-
-Use 'git config' if you need to change some of your configuration.  
 
 ### Working with Remote Repos
 
