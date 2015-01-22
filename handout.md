@@ -1,5 +1,4 @@
 
-# Git
 
 Git is a powerful, sophisticated system for distributed version control. This gives a quick introduction to git features to allow developers to follow a new and liberating approach to source code management
 
@@ -7,9 +6,23 @@ Git is a powerful, sophisticated system for distributed version control. This gi
 
 ### Setup
 Before we begin, ensure that following are installed
+### Git Simple Cycle
+
+1. Write Code
+  * Changes to files are stored in the local directory
+1. `git add .`
+  * Changes are noted in the index area
+1. `git commit -m "meaningful comment"`
+  * Changes are committed to the local repository
+1. Repeat as often as you need
+
+Variation on commit step:
+`git commit -am "meaningful comment"`
+* This will automatically "add" all previously tracked files to the repository.  Currently untracked [new] files still need to be added with `git add .`.
 
 1. Download git and install from git-scm.com
 1. Merge tool for use with git. In our case, we will go with p4merge visual merge tool (http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
+### Overview of the Main Git Structures
 
     ##### Configure P4Merge
     * git config --global diff.tool p4merge
@@ -18,11 +31,20 @@ Before we begin, ensure that following are installed
     * git config --global mergetool.p4merge.cmd "p4merge.exe \$BASE \$LOCAL \$REMOTE \$MERGED"
     * git config --global mergetool.p4merge.trustExitCode true
     * git config --global mergetool.p4merge.keepBackup false
+```
+DIR          INDEX        REPO         REMOTE
+--------     --------     --------     --------
+] WRITE
+] CODE
 
 1. AtomVCS editor can be downloaded from atom.io
+  --> add . -] (moves to index)
 
+             --> commit --] (moves to repo)
 
 ### Git Configuration
+                          --> push ----] (moves to remote)
+```
 
 Once the git is installed, set the user email address and the user name
 
@@ -114,6 +136,44 @@ Get help with Git
 ```
 git help
 ```
+### Working Locally
+Start git at a folder
+```
+git init
+```
+Show Aliases
+```
+git alias
+```
+Show all branches in repo
+```
+git branch
+```
+Show status of repo
+```
+git status
+```
+Discard changes made to a specific file and restore it
+```
+git checkout -- filename
+```
+Delete a branch from a repo
+```
+git branch -D branchName
+```
+View history of commits to the repository
+```
+git reflog
+```
+Invoke a graphical representation of reflog
+```
+gitk
+```
+### Working Locally
+Start git at a folder
+```
+git init
+```
 
 Checkout a branch
 ```
@@ -134,6 +194,18 @@ Commit changes to local repository
 ```
 git commit -m"commit_message"
 ```
+Take off the most recent commit, but keep the changes
+```
+git reset HEAD
+```
+Take of the most recent *n* commits, but keep the changes
+```
+git reset HEAD~n
+```
+Take off the most recent *n* commits, and discard the changes
+```
+git reset --hard HEAD~n
+```
 
 Working with Remote Repos
 First we need to add a remote location.
@@ -143,16 +215,18 @@ git remote add <name> <url>
 ```
 View the logs for the current branch
 
+Create a remote branch
 ```
 git reflog
+git push <remote> localBranch:remoteBranch
 ```
 Cleaning all temporary and unwanted files not in the repository
 
+Delete a remote branch
 ```
 git add . && git reset --hard HEAD
+git push <remote> :branchToDelete
 ```
-
-
 ## Advanced topics
 ### Ignoring files in your repository
 To ignore specific files, you need to create a .gitignore by running
@@ -177,6 +251,35 @@ This command modifies every commit in the current branch, back to the root, and 
 
 
 
+### Stupid GIT Tricks
+Get rid of trash files all in one go
+```
+git add .
+git reset --hard HEAD
+```
+Create an easy undo strategy
+```
+git checkout -b <undoBranch>
+<some possibly dangerous actions>
+git checkout <branch you want to keep>
+git checkout -D <branch you don't want to keep>
+```
+### Quirky Git Stuff
+* You can't add an empty directory.
+
+### Commands not to use
+Do not invoke garbage collection
+```
+git gc
+```
+Do not prune orphaned nodes
+```
+git prune
+```
+Do not rebase nodes that have been pushed
+```
+git rebase -i <commitish>..<commitish>
+```
 ## Discussions
 
 ## Tim's Aliases
