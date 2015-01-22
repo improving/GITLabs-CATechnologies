@@ -18,11 +18,11 @@ DIR          INDEX        REPO         REMOTE
 ] WRITE
 ] CODE
 
---> add . -] (moves to index)
+  --> add . -] (moves to index)
 
---> commit --] (moves to repo)
+             --> commit --] (moves to repo)
 
---> push ----] (moves to remote)
+                          --> push ----] (moves to remote)
 ```
 ## Command Line Cheat Sheet
 Verify Git installation
