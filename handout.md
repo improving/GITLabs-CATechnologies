@@ -1,16 +1,56 @@
 
-# Git Notes
-This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+#GIT Notes
+##This is the Git notes from the 1-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+
 ## Git Overview
+### What is GIT?
+* GIT is DVCS (distributed version control).
+* GIT is File system based version control.
+
+###Supported features vs other version control systems
+
+1. Commit - YES
+2. Merge  - NO
+3. Diff   - NO
+4. Edit	  - NO
+
+####Common Practice to be followed
+
+1. Write Code
+2. Add `git add .`
+3. Commit `git commit -m "msg"`
+
+####Don't use or use with caution
+
+1. `git gc`
+2. `git prune`
+
+####Git Internal
+
+When you run `git init` in a new or existing directory, Git creates the .git directory and initializes GIT,
+which is where almost everything that Git stores and manipulates is located.
+
+1. Repository --> .git directory
+2. Index --> information about staging area
+
+###Merge and rebase model
+1. git merge feature
+2. git rebase
+1. git merge branch
+2. git rebase branch
+
+
+##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+
 
 ### Git Simple Cycle
 
 1. Write Code
-  * Changes to files are stored in the local directory
+* Changes to files are stored in the local directory
 1. `git add .`
-  * Changes are noted in the index area
+* Changes are noted in the index area
 1. `git commit -m "meaningful comment"`
-  * Changes are committed to the local repositorysitory
+* Changes are committed to the local repository
 1. Repeat as often as you need
 
 Variation on commit step:
@@ -25,11 +65,11 @@ DIR          INDEX        repository         REMOTE
 ] WRITE
 ] CODE
 
-  --> add . -] (moves to index)
+--> add . -] (moves to index)
 
              --> commit --] (moves to repository)
 
-                          --> push ----] (moves to remote)
+--> push ----] (moves to remote)
 ```
 
 ## Command Line Cheat Sheet
@@ -151,8 +191,6 @@ git filter-branch --tree-filter 'rm -rf lib' HEAD
 ```
 This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repositorysitory, but a bad idea in most other cases.
 
-
-
 ### Stupid GIT Tricks
 Get rid of trash files all in one go
 ```
@@ -191,6 +229,106 @@ known problem with installer if the TEMP and TMP variables are pointing to long 
 
 3. p4merge P4Merge: Visual Merge Tool : http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
 ```
+
+
+### Setup
+Before we begin, ensure that following are installed
+
+1. Download git and install from git-scm.com
+1. Merge tool for use with git. In our case, we will go with p4merge visual merge tool (http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
+
+##### Configure P4Merge
+* git config --global diff.tool p4merge
+* git config --global difftool.p4merge.cmd "p4merge.exe \$LOCAL \$REMOTE"
+* git config --global merge.tool p4merge
+* git config --global mergetool.p4merge.cmd "p4merge.exe \$BASE \$LOCAL \$REMOTE \$MERGED"
+* git config --global mergetool.p4merge.trustExitCode true
+* git config --global mergetool.p4merge.keepBackup false
+
+1. AtomVCS editor can be downloaded from atom.io
+
+
+### Git Configuration
+
+Once the git is installed, set the user email address and the user name
+
+```
+git config -user.email <email_address>
+git config -user.name <user_name>
+```
+
+### Creating a new repository
+
+Create a new directory, go to the newly created directory and do git init.
+
+```
+$mkdir demo
+$cd demo/
+$ git init
+Initialized empty Git repository in c:/source/demo/.git/
+```
+This will create a local master and all your current will be in the 'master'
+
+
+### Working with branches
+
+By default once the repository is created, you will automatically work in the "master" branch.
+Recommendation is that any work should be carried out in a different branch (for ex: working, feature etc)
+
+Creating a branch automatically switches the working branch to the new created branch (-b option creates a new branch)
+
+```
+$ git checkout -b working
+Switched to a new branch 'working'
+```
+Now to add a file to the repository
+
+* Create a file
+* Add it to index (git add .)
+* To check the status of the files under your repository (git status).
+* Commit the file(s) to the local repository (git commit -m <comment>)
+
+### Merging branches
+Merging is Git's way of putting back together again a forked history. The git merge command lets you take the commits from one git branch and integrate them into a single branch.
+Following command merge into the current branch. The current branch will be updated to reflect the merge, but the target branch will be completely unaffected.
+
+```
+git merge <branch>
+```
+
+### Deleting branches
+
+```
+git branch -d for deleting the obsolete target branch
+
+```
+### Clone a repository
+
+It is possible to clone local repository or a remote one.
+
+To clone a remote repository:
+
+```
+git clone https://github.com/<username>/<repositoryname>.git [<target_directory>]
+```
+
+By default it would create a directory named "repositoryname", if target is not specified.
+
+To clone a local repository:
+
+```
+cd <parent_folder_of_the_repository_to_be_cloned>
+git clone <repo>/.git <cloned_repo>
+```
+
+### Cleaning generated files
+Removing files that were recently created that you do not want to ever commit.
+This is done in two steps:
+```
+git add .
+git reset --hard HEAD
+```
+
 
 ## Discussions
 
@@ -264,3 +402,46 @@ git config --global alias.unstage 'reset HEAD'
 git config --global alias.wdiff 'diff --word-diff'
 git config --global alias.who 'shortlog -s -e --'
 ```
+# Important GIT commands
+
+    git status // gives you all the status
+    git history // shows the history of git commands
+    git add . //add changes for staging area(index)
+    git alias // create alias for commands
+    git push origin localbranchname:newremotebranchname // I want to move this to some other branch and rename it
+    git checkout branch // checkout that branch
+    git lga --graphical display of branches
+    git mergetool  // brings up the git merge tool
+    git rebase --continue (rebase continue)
+    git commit --amend
+    git push origin :remotebranchname   // delete a remote branch - This is how you delete from your source of truth. Leave the localbranchname empty
+    git clone <url /dir of the remote repo> localrepositoryname // clone a branch
+    git rebase branchname
+    git branch -D working // delete branch from local repo
+    git push -u origin branchname
+    git init // initializes git directory
+    git config --global user.email "syed.akhtar@ca.com"
+    git config --global user.name "Syed Akhtar"
+    git commit -m  "first commit"
+    git checkout -b branchname // creating new branch
+    git add -A . // Commit the files are actually deleted
+    git log working
+    git log master
+    . setup.sh
+    atom .
+    git c working
+    git merge feature
+    git reset HEAD~1
+    git status
+    git lga
+    git reflog
+    git reset HEAD~1
+    git reset --hard HEAD~1
+
+    ## GIT Information and Administration
+
+    https://github.com/
+    https://github.com/improvingenterprises/GITLabs-CATechnologie
+    http://git-scm.com
+    http://git-scm.com/download/win
+    https://atom.io/
