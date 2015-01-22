@@ -1,59 +1,19 @@
-My Notes Here
-Create a new repository
-## COMMANDS TO CREATE A REPOSITORY
-echo # lab2 >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/Tejkarthik/lab2.git
-git push -u origin master
+# My GitHub Class Notes
 
-# Git Notes
-This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
-## Git Overview
+## WORKING LOCALLY:
 
-## Command Line Cheat Sheet
-Verify Git installation
-```
+* GIT does not have merge or diff tools.
+* Use p4merge for merge and diff.
+* Use atom as editor
+
+## Install required software:
+1. Install GIT : http://git-scm.com/
+2. atom : https://atom.io/
+known problem with installer if the TEMP and TMP variables are pointing to long path
+
+3. p4merge P4Merge: Visual Merge Tool : http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
+
+##Verify Git installation
 git --version
-```
-Get help with Git
-```
-git help
-```
-### Working Locally
-Start git at a folder
-```
-git init
-```
 
-### Working with Remote Repos
-
-## Discussions
-## Basic Git commands
-
-1. Git Init
-1. Git add .
-3. Git commit -m "lab2"
-# Git Notes
-This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
-## Git Overview
-
-## Command Line Cheat Sheet
-Verify Git installation
-```
-git --version
-```
-Get help with Git
-```
-git help
-```
-### Working Locally
-Start git at a folder
-```
-git init
-```
-
-### Working with Remote Repos
-
-## Discussions
+## Working with Remote Repository
