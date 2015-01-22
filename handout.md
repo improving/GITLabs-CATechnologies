@@ -79,7 +79,6 @@ git clone origin
 **FETCH   read only (included in PULL and CLONE, rarely used alone)
 **CLONE   downloads a copy of an existing repository
 
-
 ## Advanced topics
 ### Ignoring files in your repository
 To ignore specific files, you need to create a .gitignore by running
