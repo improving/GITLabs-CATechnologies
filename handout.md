@@ -1,7 +1,7 @@
-
 # Git Notes
 This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 ## Git Overview
+
 
 ### Git Simple Cycle
 
@@ -31,6 +31,7 @@ DIR          INDEX        REPO         REMOTE
 
                           --> push ----] (moves to remote)
 ```
+
 
 ## Command Line Cheat Sheet
 Verify Git installation
@@ -79,7 +80,6 @@ Invoke a graphical representation of reflog
 ```
 gitk
 ```
-### Working Locally
 
 General work cycle
 * Write code
@@ -117,6 +117,20 @@ Take off the most recent *n* commits, and discard the changes
 ```
 git reset --hard HEAD~n
 ```
+  type 'git init' (first time only)
+  git -scm will determine IDE (install 2.2.2 or later)
+
+    get products:  Atom.io, p4merge
+
+  default text editor is VI (think UNIX)
+### Working Locally
+
+General work cycle
+      * Write code
+      * . add
+      * commit
+
+##General
 
 To see prior history 'git history'
 
@@ -218,6 +232,8 @@ Set up a github account.  Can be free account with name/password.  Good place fo
 
 Remember git (like UNIX) is case-sensitive.
 
+
+#Best Practices
 Work from a **working** or **feature** branch, not **master**
 
 Use 'git status' frequently to be sure where you are, what needs to be committed or removed (like .origin files)
