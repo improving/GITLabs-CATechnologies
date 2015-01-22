@@ -18,13 +18,23 @@ Start git at a folder
 git init
 ```
 
-### Advanced topics
-# Removing unwanted directories permanently
-
-```git filter-branch --tree-filter 'rm -rf lib' HEAD```
-
-this is is if you want to completely remove any trace of the diretory `lib` from your repository.
-
 ### Working with Remote Repos
+First we need to add a remote location.
+
+```
+git remote add <name> <url>
+```
+
+
+## Advanced topics
+### Removing unwanted directories permanently
+
+```
+git filter-branch --tree-filter 'rm -rf lib' HEAD
+```
+
+This is is if you want to completely remove any trace of the diretory `lib` from your repository.
+
+
 
 ## Discussions
