@@ -53,4 +53,17 @@ git init
 
 ### Working with Remote Repos
 
+### Commands not to use
+Do not invoke garbage collection
+```
+git gc
+```
+Do not prune orphaned nodes
+```
+git prune
+```
+Do not rebase nodes that have been pushed
+```
+git rebase -i <commitish>..<commitish>
+```
 ## Discussions
