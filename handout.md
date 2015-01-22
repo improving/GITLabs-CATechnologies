@@ -66,8 +66,7 @@ git reset --hard HEAD
 ```
 git filter-branch --tree-filter 'rm -rf lib' HEAD
 ```
-
-This is is if you want to completely remove any trace of the diretory `lib` from your repository.
+This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repository, but a bad idea in most other cases.
 
 
 
