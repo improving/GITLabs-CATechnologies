@@ -53,6 +53,13 @@ git init
 
 ### Working with Remote Repos
 
+### Stupid GIT Tricks
+Get rid of trash files all in one go
+```
+git add .
+git reset --hard HEAD
+```
+
 ### Commands not to use
 Do not invoke garbage collection
 ```
