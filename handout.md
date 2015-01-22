@@ -1,0 +1,73 @@
+# Important GIT commands
+
+    git status // gives you all the status
+    git history // shows the history of git commands
+    git add .
+    git alias
+    git c working
+    git push origin working:demo // I want to move this to some other branch and rename it
+    git c feature
+    git lga
+    git mergetool  // brings up the git merge tool
+    git rebase --continue (rebase continue)
+    git commit --amend
+    git rebase --continue
+    git checkout feature
+    git push origin working:demo / add a new branch to git
+    git push origin :demo   // delete a remote branch - This is how you delete from your source of truth
+    git clone ./lab2/.git lab2-clone // clone a branch
+    git push origin working:demo // new
+    git rebase working
+    get lga
+    git rebase feature
+    git mergetool
+    git rebase --continue
+    git mergetool
+    same as above
+    git branch -D working
+    git push -u origin master
+    git push -u origin working
+    git push -u origin feature
+    mkdir deleteme
+    cd deleteme
+    git init
+    touch file1.txt
+    touch file2.txt
+    touch file3.txt
+    git status
+    git add .
+    git status
+    git config --global user.email "syed.akhtar@ca.com"
+    git config --global user.name "Syed Akhtar"
+    git commit -m  "first commit"
+    git checkout -b working - now the branch says working not master
+    rm *
+    git status
+    git add .    // this did not do anything because there are no files
+    git add -A . // I am committing that those files are actually deleted - you are committing the deletions
+    git commit -m "deleted files" committing the deleted files
+    git checkout master       // to go into master git directory
+    git checkout working      // to go into working git directory
+    git log working
+    git log master
+    . setup.sh
+    atom .
+    git c working
+    git merge feature
+    git reset HEAD~1
+    git status
+    git lga
+    git reflog
+    git reset HEAD~1
+    git reset --hard HEAD~1
+
+    ## GIT Information and Administration
+
+        https://github.com/
+        userid: sakhtar01
+        password: Uzma0101
+
+        https://github.com/improvingenterprises/GITLabs-CATechnologie
+        Installing GIT - http://git-scm.com -  http://git-scm.com/download/win
+
+        Go to https://atom.io/ and download Atom - click on download windows installer
