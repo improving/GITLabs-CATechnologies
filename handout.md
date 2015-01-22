@@ -33,8 +33,8 @@ which is where almost everything that Git stores and manipulates is located.
 2. Index --> information about staging area
 
 ###Merge and rebase model
-1. git merge feature
-2. git rebase
+1. git merge branch
+2. git rebase branch
 
 
 ##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
@@ -63,52 +63,25 @@ GIT-SCM.com
 
     git status // gives you all the status
     git history // shows the history of git commands
-    git add .
-    git alias
-    git c working
-    git push origin working:demo // I want to move this to some other branch and rename it
-    git c feature
-    git lga
+    git add . //add changes for staging area(index)
+    git alias // create alias for commands
+    git push origin localbranchname:newremotebranchname // I want to move this to some other branch and rename it
+    git checkout branch // checkout that branch
+    git lga --graphical display of branches
     git mergetool  // brings up the git merge tool
     git rebase --continue (rebase continue)
     git commit --amend
-    git rebase --continue
-    git checkout feature
-    git push origin working:demo / add a new branch to git
-    git push origin :demo   // delete a remote branch - This is how you delete from your source of truth
-    git clone ./lab2/.git lab2-clone // clone a branch
-    git push origin working:demo // new
-    git rebase working
-    get lga
-    git rebase feature
-    git mergetool
-    git rebase --continue
-    git mergetool
-    same as above
-    git branch -D working
-    git push -u origin master
-    git push -u origin working
-    git push -u origin feature
-    mkdir deleteme
-    cd deleteme
-    git init
-    touch file1.txt
-    touch file2.txt
-    touch file3.txt
-    git status
-    git add .
-    git status
+    git push origin :remotebranchname   // delete a remote branch - This is how you delete from your source of truth. Leave the localbranchname empty
+    git clone <url /dir of the remote repo> localrepositoryname // clone a branch
+    git rebase branchname
+    git branch -D working // delete branch from local repo
+    git push -u origin branchname
+    git init // initializes git directory
     git config --global user.email "syed.akhtar@ca.com"
     git config --global user.name "Syed Akhtar"
     git commit -m  "first commit"
-    git checkout -b working - now the branch says working not master
-    rm *
-    git status
-    git add .    // this did not do anything because there are no files
-    git add -A . // I am committing that those files are actually deleted - you are committing the deletions
-    git commit -m "deleted files" committing the deleted files
-    git checkout master       // to go into master git directory
-    git checkout working      // to go into working git directory
+    git checkout -b branchname // creating new branch
+    git add -A . // Commit the files are actually deleted
     git log working
     git log master
     . setup.sh
