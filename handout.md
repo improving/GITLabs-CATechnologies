@@ -49,13 +49,36 @@ Commit changes to local repository
 git commit -m"commit_message"
 ```
 
+To see prior history 'git history'
+
+
+
+
 ### Working with Remote Repos
 First we need to add a remote location.
 
 ```
 git remote add <name> <url>
 ```
+
+To remove a remote location:
+
+...
+git remote rm <name>
+...
+
 Note: 'origin' is commonly used for 'source of truth', can reference any other url
+
+To download a copy of an exiting repository:
+git clone origin
+
+### Network commands
+
+**PULL    read only
+**PUSH    read/write
+**FETCH   read only (included in PULL and CLONE, rarely used alone)
+**CLONE   downloads a copy of an existing repository
+
 
 ## Advanced topics
 ### Ignoring files in your repository
@@ -92,6 +115,7 @@ Work from a **working** or **feature** branch, not **master**
 Use 'git status' frequently to be sure where you are, what needs to be committed or removed (like .origin files)
 
 Use 'git config' if you need to change some of your configuration.  
+
 
 ## Tim's Aliases
 
