@@ -1,11 +1,3 @@
-# Notes from Git training
-
-## Tools
-Git doesn't have a tool to diff and merge. So, use P4merge
-Editor: atom
-
-## Git CLI
-git init (to create a new git repository from the current directory)
 # Git Notes
 This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 ## Git Overview
@@ -22,7 +14,7 @@ git help
 ### Working Locally
 Start git at a folder
 ```
-git init
+git init (to create a new git repository from the current directory)
 ```
 
 ### Working with Remote Repos
