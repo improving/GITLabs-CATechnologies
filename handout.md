@@ -1,6 +1,7 @@
 
-# Git Notes
-This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+#GIT Notes
+##This is the Git notes from the 1-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+
 ## Git Overview
 ### What is GIT?
 * GIT is DVCS (distributed version control).
@@ -35,6 +36,8 @@ which is where almost everything that Git stores and manipulates is located.
 ###Merge and rebase model
 1. git merge feature
 2. git rebase
+1. git merge branch
+2. git rebase branch
 
 
 ##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
