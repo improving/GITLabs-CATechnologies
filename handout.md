@@ -11,12 +11,12 @@ Before we begin, ensure that following are installed
 1. Merge tool for use with git. In our case, we will go with p4merge visual merge tool (http://www.perforce.com/downloads/Perforce/20-User?qt-perforce_downloads_step_3=1#product-10)
 
     ##### Configure P4Merge
-    git config --global diff.tool p4merge
-    git config --global difftool.p4merge.cmd "p4merge.exe \$LOCAL \$REMOTE"
-    git config --global merge.tool p4merge
-    git config --global mergetool.p4merge.cmd "p4merge.exe \$BASE \$LOCAL \$REMOTE \$MERGED"
-    git config --global mergetool.p4merge.trustExitCode true
-    git config --global mergetool.p4merge.keepBackup false
+    * git config --global diff.tool p4merge
+    * git config --global difftool.p4merge.cmd "p4merge.exe \$LOCAL \$REMOTE"
+    * git config --global merge.tool p4merge
+    * git config --global mergetool.p4merge.cmd "p4merge.exe \$BASE \$LOCAL \$REMOTE \$MERGED"
+    * git config --global mergetool.p4merge.trustExitCode true
+    * git config --global mergetool.p4merge.keepBackup false
 
 1. AtomVCS editor can be downloaded from atom.io
 
@@ -63,7 +63,7 @@ Git allows you define your own aliases to make your life easier
 
 ### Creating a new repository
 
-Create a new directory, go to teh newly created directory and do git init.
+Create a new directory, go to the newly created directory and do git init.
 
 *   $ mkdir demo
 *   $ cd demo/
