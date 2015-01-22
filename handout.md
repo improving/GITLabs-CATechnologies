@@ -90,6 +90,11 @@ Now to add a file to the repository
    * To check the status of the files under your repository (git status).
    * Commit the file(s) to the local repository (git commit -m <comment>)
 
+### View the logs for the current branch
+
+  * git reflog
+
+  This lists the commit history
 ## Clone a repository
 
 
