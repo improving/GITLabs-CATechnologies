@@ -11,5 +11,5 @@ git push -u origin master
 ## Basic Git commands
 
 1. Git Init
-1. Git Add .
+1. Git add .
 3. Git commit -m "lab2"
