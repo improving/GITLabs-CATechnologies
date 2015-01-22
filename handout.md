@@ -43,6 +43,35 @@ which is where almost everything that Git stores and manipulates is located.
 ##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 
 
+### Git Simple Cycle
+
+1. Write Code
+  * Changes to files are stored in the local directory
+1. `git add .`
+  * Changes are noted in the index area
+1. `git commit -m "meaningful comment"`
+  * Changes are committed to the local repository
+1. Repeat as often as you need
+
+Variation on commit step:
+`git commit -am "meaningful comment"`
+* This will automatically "add" all previously tracked files to the repository.  Currently untracked [new] files still need to be added with `git add .`.
+
+### Overview of the Main Git Structures
+
+```
+DIR          INDEX        REPO         REMOTE
+--------     --------     --------     --------
+] WRITE
+] CODE
+
+  --> add . -] (moves to index)
+
+             --> commit --] (moves to repo)
+
+                          --> push ----] (moves to remote)
+```
+
 ## Command Line Cheat Sheet
 Verify Git installation
 ```
@@ -51,6 +80,34 @@ git --version
 Get help with Git
 ```
 git help
+```
+Show Aliases
+```
+git alias
+```
+Show all branches in repo
+```
+git branch
+```
+Show status of repo
+```
+git status
+```
+Discard changes made to a specific file and restore it
+```
+git checkout -- filename
+```
+Delete a branch from a repo
+```
+git branch -D branchName
+```
+View history of commits to the repository
+```
+git reflog
+```
+Invoke a graphical representation of reflog
+```
+gitk
 ```
 ### Working Locally
 Start git at a folder
@@ -77,6 +134,18 @@ Commit changes to local repository
 ```
 git commit -m"commit_message"
 ```
+Take off the most recent commit, but keep the changes
+```
+git reset HEAD
+```
+Take of the most recent *n* commits, but keep the changes
+```
+git reset HEAD~n
+```
+Take off the most recent *n* commits, and discard the changes
+```
+git reset --hard HEAD~n
+```
 
 ### Working with Remote Repos
 First we need to add a remote location.
@@ -84,8 +153,14 @@ First we need to add a remote location.
 ```
 git remote add <name> <url>
 ```
-
-
+Create a remote branch
+```
+git push <remote> localBranch:remoteBranch
+```
+Delete a remote branch
+```
+git push <remote> :branchToDelete
+```
 ## Advanced topics
 ### Ignoring files in your repository
 To ignore specific files, you need to create a .gitignore by running
@@ -108,6 +183,35 @@ git filter-branch --tree-filter 'rm -rf lib' HEAD
 ```
 This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repository, but a bad idea in most other cases.
 
+### Stupid GIT Tricks
+Get rid of trash files all in one go
+```
+git add .
+git reset --hard HEAD
+```
+Create an easy undo strategy
+```
+git checkout -b <undoBranch>
+<some possibly dangerous actions>
+git checkout <branch you want to keep>
+git checkout -D <branch you don't want to keep>
+```
+### Quirky Git Stuff
+* You can't add an empty directory.
+
+### Commands not to use
+Do not invoke garbage collection
+```
+git gc
+```
+Do not prune orphaned nodes
+```
+git prune
+```
+Do not rebase nodes that have been pushed
+```
+git rebase -i <commitish>..<commitish>
+```
 ## Discussions
 
 ## Tim's Aliases
