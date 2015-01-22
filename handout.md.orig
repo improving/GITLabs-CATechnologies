@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+My notes here
+
+Start
+  right-click a directory for 'home base'
+  select GIT base
+  type 'git init' (first time only)
+  git -scm will determine IDE (install 2.2.2 or later)
+
+    get products:  Atom.io, p4merge
+
+  default text editor is VI (think UNIX)
+
+General work cycle
+      * Write code
+      * . add
+      * commit
+
+Set up a 
+=======
+# Git Notes
+This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
+## Git Overview
+
+## Command Line Cheat Sheet
+Verify Git installation
+```
+git --version
+```
+Get help with Git
+```
+git help
+```
+### Working Locally
+Start git at a folder
+```
+git init
+```
+
+### Working with Remote Repos
+
+## Discussions
+>>>>>>> 3c077245a4292b628e37d3ecc9462cab960347c1
