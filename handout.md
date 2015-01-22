@@ -39,8 +39,6 @@ which is where almost everything that Git stores and manipulates is located.
 
 ##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 
-##This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
-
 
 ## Command Line Cheat Sheet
 Verify Git installation
@@ -106,8 +104,6 @@ git reset --hard HEAD
 git filter-branch --tree-filter 'rm -rf lib' HEAD
 ```
 This command modifies every commit in the current branch, back to the root, and changes it by removing the lib folder. As such, it will modify the commitish for all of those commits, and hence likely change public history. This is a good command when preparing a migrated repository, but a bad idea in most other cases.
-
-
 
 ## Discussions
 
@@ -220,7 +216,7 @@ git config --global alias.who 'shortlog -s -e --'
     ## GIT Information and Administration
 
     https://github.com/
-                https://github.com/improvingenterprises/GITLabs-CATechnologie
-    Installing GIT - http://git-scm.com -  http://git-scm.com/download/win
-
-  Go to https://atom.io/ and download Atom - click on download windows installer
+    https://github.com/improvingenterprises/GITLabs-CATechnologie
+    http://git-scm.com
+    http://git-scm.com/download/win
+    https://atom.io/
