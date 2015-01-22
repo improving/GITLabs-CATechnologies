@@ -2,9 +2,8 @@
 # Removing unwanted directories permanently
 
 1.`git filter-branch --tree-filter 'rm -rf lib' HEAD`
-
-this is the beginning of the end.  
 =======
+
 # Git Notes
 This is the Git notes from the 2-day training session at ImprovingEnterprises on Jan 21-22, 2015.
 ## Git Overview
@@ -25,6 +24,23 @@ git init
 ```
 
 ### Working with Remote Repos
+First we need to add a remote location.
 
-## Discussions
->>>>>>> 3631b1c... command line notes
+```
+git remote add <name> <url>
+```
+
+
+## Advanced topics
+### Removing unwanted directories permanently
+
+```
+git filter-branch --tree-filter 'rm -rf lib' HEAD
+```
+
+This is is if you want to completely remove any trace of the diretory `lib` from your repository.
+
+
+>>>>>>> dd8ba78... reformatted after the merge
+
+this is the beginning of the end.  
