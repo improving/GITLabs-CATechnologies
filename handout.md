@@ -97,11 +97,8 @@ GIT-SCM.com
 
     ## GIT Information and Administration
 
-        https://github.com/
-        userid: sakhtar01
-        password: Uzma0101
+    https://github.com/
+                https://github.com/improvingenterprises/GITLabs-CATechnologie
+    Installing GIT - http://git-scm.com -  http://git-scm.com/download/win
 
-        https://github.com/improvingenterprises/GITLabs-CATechnologie
-        Installing GIT - http://git-scm.com -  http://git-scm.com/download/win
-
-        Go to https://atom.io/ and download Atom - click on download windows installer
+  Go to https://atom.io/ and download Atom - click on download windows installer
