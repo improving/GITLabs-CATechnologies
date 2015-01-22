@@ -103,6 +103,13 @@ This command modifies every commit in the current branch, back to the root, and 
 
 
 
+### Stupid GIT Tricks
+Get rid of trash files all in one go
+```
+git add .
+git reset --hard HEAD
+```
+
 ### Commands not to use
 Do not invoke garbage collection
 ```
